@@ -19,6 +19,7 @@ body {
     max-width: 80vw;
     display: flex;
     flex-direction: column;
+    flex: auto;
     border: 2px solid black;
 }
 
