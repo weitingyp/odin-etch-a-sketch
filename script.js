@@ -17,7 +17,6 @@ for (let i = 0; i < gridDimension; i++){
     const newRow = row.cloneNode(true);
     for (let j = 0; j < gridDimension ; j++){
         const _ = cell.cloneNode(true);
-        _.innerText = `${i},${j}`;
         _.addEventListener("mouseover", function (e){
             this.style["background-color"]="black";
         });
