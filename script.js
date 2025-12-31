@@ -11,7 +11,7 @@ for (let i = 0; i < gridDimension; i++){
     const row = document.createElement("div");
     row.class = "row";
     for (let j = 0; j < gridDimension ; j++){
-            const _ = cell.cloneNode(true);
+        const _ = cell.cloneNode(true);
         _.innerText = `${i},${j}`;
         row.appendChild(_);
     }
