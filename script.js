@@ -21,6 +21,11 @@ row.className = "row";
 const cell = document.createElement("div");
 cell.className = "cell";
 
+function randomRGB(){
+    let rgb = new Array(3).fill(1);
+    return rgb.map(val => Math.floor(Math.random()*255));
+}
+
 function createGrid(gridDimension){
     container.replaceChildren();
     for (let i = 0; i < gridDimension; i++){
@@ -28,7 +33,8 @@ function createGrid(gridDimension){
     for (let j = 0; j < gridDimension ; j++){
         const _ = cell.cloneNode(true);
         _.addEventListener("mouseover", function (e){
-            this.style["background-color"]="black";
+            let rgb = randomRGB();
+            this.style["background-color"]=`rgb(${rgb[0]},${rgb[1]}, ${rgb[2]})`;
         });
         newRow.appendChild(_);
     }
