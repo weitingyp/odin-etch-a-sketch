@@ -21,4 +21,9 @@ body {
 .row{
     display: flex;
     flex-direction: row;
+    flex: auto;
+}
+
+.cell {
+    flex: auto;
 }
