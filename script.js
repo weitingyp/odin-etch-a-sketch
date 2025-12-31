@@ -4,16 +4,14 @@ const container = document.createElement("div");
 container.id = "container";
 body.appendChild(container);
 
-const gridDimension = 16;
-
 const row = document.createElement("div");
 row.className = "row";
 
 const cell = document.createElement("div");
 cell.className = "cell";
 
-
-for (let i = 0; i < gridDimension; i++){
+function createGrid(gridDimension){
+    for (let i = 0; i < gridDimension; i++){
     const newRow = row.cloneNode(true);
     for (let j = 0; j < gridDimension ; j++){
         const _ = cell.cloneNode(true);
@@ -23,7 +21,10 @@ for (let i = 0; i < gridDimension; i++){
         newRow.appendChild(_);
     }
     container.appendChild(newRow);
+    }
 }
+
+createGrid(16);
 
 const clearBtn = document.createElement("button");
 clearBtn.id = "clearBtn";
