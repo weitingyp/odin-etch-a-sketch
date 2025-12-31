@@ -9,12 +9,12 @@ body.appendChild(container);
 const gridDimension = 16;
 
 const row = document.createElement("div");
-row.class = "row";
+row.className = "row";
 row.style["display"] = "flex";
 row.style["flex-direction"] = "row";
 
 const cell = document.createElement("div");
-cell.class = "cell";
+cell.className = "cell";
 
 for (let i = 0; i < gridDimension; i++){
     const newRow = row.cloneNode(true);
