@@ -25,3 +25,16 @@ for (let i = 0; i < gridDimension; i++){
     }
     container.appendChild(newRow);
 }
+
+const clearBtn = document.createElement("button");
+clearBtn.id = "clearBtn";
+clearBtn.innerText = "Clear Grid";
+body.appendChild(clearBtn);
+
+cellList = document.querySelectorAll(".cell");
+
+clearBtn.addEventListener("click", function(e) {
+    cellList.forEach (function(e) {
+        e.style["background-color"] = "";
+    })
+});
